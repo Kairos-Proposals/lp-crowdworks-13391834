@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ご提案｜国際結婚相談所 新事業ホームページ制作 - Kairos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700;900&family=Noto+Sans+JP:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+
+  :root{
+    --navy:#1B2A4A;
+    --navy-deep:#101c33;
+    --gold:#A87C3F;
+    --gold-light:#CBA967;
+    --cream:#F5F2E9;
+    --cream-warm:#EFE9DA;
+    --ink:#33302B;
+    --vermillion:#7C3B3B;
+    --pale-blue:#E7ECF1;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;}
+
+  html{scroll-behavior:smooth;}
+
+  body{
+    font-family:'Noto Sans JP','Noto Serif JP',serif;
+    color:var(--ink);
+    background:var(--cream);
+    line-height:1.9;
+    overflow-x:hidden;
+  }
+
+  h1,h2,h3,h4{
+    font-family:'Noto Serif JP',serif;
+    letter-spacing:0.03em;
+  }
+
+  .eyebrow{
+    font-family:'Cormorant Garamond',serif;
+    font-style:italic;
+    letter-spacing:0.12em;
+    color:var(--gold);
+    font-size:0.95rem;
+  }
+
+  .wrap{
+    max-width:1080px;
+    margin:0 auto;
+    padding:0 6vw;
+  }
+
+  /* ===== HERO ===== */
+  .hero{
+    position:relative;
+    background:radial-gradient(ellipse at 30% 20%, #24365c 0%, var(--navy) 45%, var(--navy-deep) 100%);
+    color:#F5F2E9;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    overflow:hidden;
+    padding:8vh 0;
+  }
+
+  .hero::before{
+    content:"";
+    position:absolute;
+    top:50%;
+    right:-10%;
+    width:640px;
+    height:640px;
+    border:1px solid rgba(203,169,103,0.35);
+    border-radius:50%;
+    transform:translateY(-50%);
+  }
+  .hero::after{
+    content:"";
+    position:absolute;
+    top:50%;
+    right:2%;
+    width:440px;
+    height:440px;
+    border:1px solid rgba(203,169,103,0.5);
+    border-radius:50%;
+    transform:translateY(-50%);
+  }
+
+  .hero-ring-small{
+    position:absolute;
+    left:-120px;
+    bottom:-120px;
+    width:320px;
+    height:320px;
+    border-radius:50%;
+    background:radial-gradient(circle, rgba(168,124,63,0.25), transparent 70%);
+  }
+
+  .hero-inner{
+    position:relative;
+    z-index:2;
+    max-width:1080px;
+    margin:0 auto;
+    padding:0 6vw;
+    width:100%;
+  }
+
+  .hero-tag{
+    display:inline-block;
+    font-family:'Cormorant Garamond',serif;
+    font-style:italic;
+    font-size:1rem;
+    letter-spacing:0.2em;
+    color:var(--gold-light);
+    border:1px solid rgba(203,169,103,0.5);
+    padding:6px 20px;
+    border-radius:30px;
+    margin-bottom:2rem;
+  }
+
+  .hero h1{
+    font-size:clamp(2rem, 5vw, 3.4rem);
+    font-weight:700;
+    line-height:1.5;
+    margin-bottom:1.6rem;
+    text-shadow:0 2px 20px rgba(0,0,0,0.3);
+  }
+
+  .hero h1 .accent{
+    color:var(--gold-light);
+  }
+
+  .hero p.lead{
+    font-size:1.02rem;
+    color:#D9DEE8;
+    max-width:520px;
+    margin-bottom:2.4rem;
+    font-weight:300;
+  }
+
+  .hero .from{
+    font-family:'Cormorant Garamond',serif;
+    font-size:0.95rem;
+    letter-spacing:0.1em;
+    color:#B9C1CF;
+  }
+
+  .hero .from strong{
+    color:var(--gold-light);
+    font-weight:500;
+  }
+
+  /* ===== SECTION COMMON ===== */
+  section{
+    padding:6.5rem 0;
+    position:relative;
+  }
+
+  .section-head{
+    margin-bottom:3.2rem;
+    text-align:center;
+  }
+
+  .section-head .eyebrow{
+    display:block;
+    margin-bottom:0.8rem;
+  }
+
+  .section-head h2{
+    font-size:clamp(1.5rem,3.2vw,2.1rem);
+    color:var(--navy);
+    font-weight:700;
+  }
+
+  .section-head .sub{
+    margin-top:1rem;
+    color:#6b675f;
+    font-size:0.92rem;
+  }
+
+  /* ===== UNDERSTANDING ===== */
+  .understand{
+    background:var(--cream);
+  }
+
+  .understand-box{
+    display:flex;
+    gap:3rem;
+    align-items:flex-start;
+  }
+
+  .understand-mark{
+    flex:0 0 auto;
+    width:88px;
+    height:88px;
+    border-radius:50%;
+    border:1px solid var(--gold);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:'Noto Serif JP',serif;
+    font-size:1.6rem;
+    color:var(--gold);
+    background:radial-gradient(circle, rgba(168,124,63,0.08), transparent 70%);
+  }
+
+  .understand-text h3{
+    font-size:1.3rem;
+    color:var(--navy);
+    margin-bottom:1.2rem;
+    font-weight:700;
+    line-height:1.7;
+  }
+
+  .understand-text p{
+    color:#4b473f;
+    font-size:0.98rem;
+  }
+
+  .understand-text p + p{
+    margin-top:1rem;
+  }
+
+  .quote-line{
+    border-left:3px solid var(--vermillion);
+    padding-left:1.4rem;
+    margin:1.8rem 0;
+    color:var(--navy);
+    font-family:'Noto Serif JP',serif;
+    font-size:1.02rem;
+  }
+
+  @media (max-width:720px){
+    .understand-box{flex-direction:column;gap:1.6rem;}
+  }
+
+  /* ===== VALUE CARDS ===== */
+  .value{
+    background:linear-gradient(180deg, var(--pale-blue) 0%, var(--cream) 100%);
+  }
+
+  .cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(260px,1fr));
+    gap:1.8rem;
+  }
+
+  .card{
+    background:#FFFFFC;
+    border:1px solid #DED6C0;
+    border-radius:4px;
+    padding:2.2rem 1.8rem;
+    position:relative;
+    transition:transform 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 16px 30px rgba(27,42,74,0.1);
+  }
+
+  .card .num{
+    font-family:'Cormorant Garamond',serif;
+    font-size:2.2rem;
+    color:var(--gold);
+    font-style:italic;
+    margin-bottom:0.8rem;
+    display:block;
+  }
+
+  .card h3{
+    font-size:1.08rem;
+    color:var(--navy);
+    margin-bottom:0.9rem;
+    font-weight:700;
+  }
+
+  .card p{
+    font-size:0.9rem;
+    color:#57534b;
+  }
+
+  /* ===== FLOW ===== */
+  .flow{
+    background:var(--navy-deep);
+    color:#EDEAE0;
+  }
+
+  .flow .section-head h2{color:#fff;}
+  .flow .section-head .sub{color:#9CA6BC;}
+  .flow .eyebrow{color:var(--gold-light);}
+
+  .timeline{
+    position:relative;
+    margin-top:2rem;
+  }
+
+  .timeline::before{
+    content:"";
+    position:absolute;
+    left:28px;
+    top:8px;
+    bottom:8px;
+    width:1px;
+    background:linear-gradient(180deg, rgba(203,169,103,0.6), rgba(203,169,103,0.1));
+  }
+
+  .t-item{
+    display:flex;
+    gap:1.8rem;
+    margin-bottom:2.6rem;
+    position:relative;
+  }
+
+  .t-item:last-child{margin-bottom:0;}
+
+  .t-dot{
+    flex:0 0 auto;
+    width:56px;
+    height:56px;
+    border-radius:50%;
+    background:var(--navy);
+    border:1px solid var(--gold-light);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:'Cormorant Garamond',serif;
+    font-style:italic;
+    font-size:1.2rem;
+    color:var(--gold-light);
+    z-index:1;
+  }
+
+  .t-content h4{
+    font-size:1.05rem;
+    margin-bottom:0.5rem;
+    color:#F5F2E9;
+    font-weight:500;
+  }
+
+  .t-content p{
+    font-size:0.88rem;
+    color:#B9C1CF;
+    max-width:520px;
+  }
+
+  .t-content .dur{
+    display:inline-block;
+    margin-top:0.5rem;
+    font-family:'Cormorant Garamond',serif;
+    font-style:italic;
+    font-size:0.85rem;
+    color:var(--gold-light);
+  }
+
+  /* ===== CLOSING ===== */
+  .closing{
+    background:radial-gradient(ellipse at 50% 0%, #2b3f66 0%, var(--navy) 55%, var(--navy-deep) 100%);
+    color:#F5F2E9;
+    text-align:center;
+    padding:7rem 0;
+    position:relative;
+    overflow:hidden;
+  }
+
+  .closing::before{
+    content:"縁";
+    position:absolute;
+    font-family:'Noto Serif JP',serif;
+    font-size:32rem;
+    color:rgba(255,255,255,0.03);
+    top:-6rem;
+    left:50%;
+    transform:translateX(-50%);
+    line-height:1;
+    pointer-events:none;
+  }
+
+  .closing-inner{
+    position:relative;
+    z-index:1;
+  }
+
+  .closing h2{
+    font-size:clamp(1.6rem,3.6vw,2.3rem);
+    margin-bottom:1.4rem;
+    font-weight:700;
+  }
+
+  .closing p{
+    color:#C6CCDA;
+    max-width:520px;
+    margin:0 auto 2.6rem;
+    font-size:0.96rem;
+  }
+
+  .cta-btn{
+    display:inline-block;
+    background:linear-gradient(120deg, var(--gold) 0%, var(--gold-light) 100%);
+    color:var(--navy-deep);
+    padding:1rem 3.2rem;
+    border-radius:2px;
+    font-weight:700;
+    text-decoration:none;
+    font-size:0.98rem;
+    letter-spacing:0.05em;
+    box-shadow:0 12px 24px rgba(168,124,63,0.35);
+    transition:transform 0.2s ease;
+  }
+
+  .cta-btn:hover{
+    transform:translateY(-3px);
+  }
+
+  .closing-sub{
+    margin-top:2rem;
+    font-family:'Cormorant Garamond',serif;
+    font-style:italic;
+    color:#8B93A6;
+    font-size:0.85rem;
+    letter-spacing:0.08em;
+  }
+
+  footer{
+    background:var(--navy-deep);
+    color:#7A8299;
+    text-align:center;
+    padding:2rem 0;
+    font-size:0.78rem;
+    letter-spacing:0.05em;
+  }
+
+  footer strong{color:var(--gold-light);}
+
+  @media (max-width:600px){
+    .hero{min-height:auto;padding-top:12vh;padding-bottom:8vh;}
+    section{padding:4.5rem 0;}
+    .hero::before{width:400px;height:400px;right:-30%;}
+    .hero::after{width:280px;height:280px;right:-8%;}
+  }
+
+</style>
+</head>
+<body>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero-ring-small"></div>
+    <div class="hero-inner">
+      <span class="hero-tag">Kairos Proposal / 提案書</span>
+      <h1>言葉も国籍も越えて、<br><span class="accent">確かな縁</span>を結ぶ場所。</h1>
+      <p class="lead">
+        栃木で15年、地道に信頼を積み上げてきた相談所様の新事業――国際結婚を専門とするサービスに、
+        その実直さがそのまま伝わるホームページを。私たちKairosがご提案いたします。
+      </p>
+      <div class="from">
+        Proposed by <strong>Kairos</strong> — Web制作・システム開発チーム
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== UNDERSTANDING ===== -->
+  <section class="understand">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Our Understanding</span>
+        <h2>この案件に、私たちが感じたこと</h2>
+      </div>
+
+      <div class="understand-box">
+        <div class="understand-mark">縁</div>
+        <div class="understand-text">
+          <h3>「40代以上の男性」が本当に見たいのは、<br>華やかさではなく“この人たちなら任せられる”という確信です。</h3>
+          <p>
+            国際結婚という選択には、言語・文化・年齢・将来設計への不安が伴います。
+            そこに踏み出そうとする40代以上の男性が求めるのは、若さや派手な演出ではなく、
+            15年間地域で結果を出してきた相談所としての「実績」と「誠実さ」が、
+            サイトを開いた瞬間に静かに伝わることだと考えています。
+          </p>
+          <div class="quote-line">
+            「派手さよりも信頼感を」というご要望は、単なるデザインの好みではなく、
+            このサービスの根幹そのものだと理解しています。
+          </div>
+          <p>
+            全8ページという規模も、あれこれ盛り込むのではなく、必要な情報を必要な順に、
+            落ち着いた歩幅で伝えるページ構成が適していると考えます。
+            栃木という地に根を張った相談所が、世界に手を伸ばす――その物語を、
+            誇張せず、静かな説得力を持つサイトとして形にいたします。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== VALUE ===== -->
+  <section class="value">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">What Kairos Provides</span>
+        <h2>Kairosがご提供できること</h2>
+        <p class="sub">単なる制作ではなく、貴社の信頼を「伝わる形」に変換します</p>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <span class="num">01</span>
+          <h3>信頼感を軸にした設計思想</h3>
+          <p>落ち着いた配色・書体・余白の設計により、40代以上男性が安心して読み進められる誠実な印象を構築します。</p>
+        </div>
+        <div class="card">
+          <span class="num">02</span>
+          <h3>15年の実績を“伝わる資産”に</h3>
+          <p>栃木での歩みや成婚実績、相談所としての姿勢を、単なる文字情報でなく説得力のあるストーリーとして構成します。</p>
+        </div>
+        <div class="card">
+          <span class="num">03</span>
+          <h3>国際結婚という不安への配慮</h3>
+          <p>費用・進め方・在留資格や文化差への不安など、閲覧者が抱く疑問を先回りして解消する情報設計を行います。</p>
+        </div>
+        <div class="card">
+          <span class="num">04</span>
+          <h3>全8ページの無駄のない構成</h3>
+          <p>トップ／代表挨拶／サービス紹介／実績・お客様の声／料金／よくある質問／会社概要／お問い合わせ等、
+          目的に合わせた最小限で最大限伝わる構成をご提案します。</p>
+        </div>
+        <div class="card">
+          <span class="num">05</span>
+          <h3>更新・運用まで見据えた制作</h3>
+          <p>制作後も相談所様ご自身で情報更新ができる仕組みや、公開後の軽微な修正・相談にも対応できる体制を整えます。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FLOW ===== -->
+  <section class="flow">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">How We Work</span>
+        <h2>進め方とスケジュールの目安</h2>
+        <p class="sub">全8ページ規模を想定した標準的な流れです。ご状況に応じて調整いたします</p>
+      </div>
+
+      <div class="timeline">
+        <div class="t-item">
+          <div class="t-dot">01</div>
+          <div class="t-content">
+            <h4>ヒアリング・方向性のご相談</h4>
+            <p>ターゲット像、既存事業とのすみ分け、伝えたい強みなどを丁寧に伺います。</p>
+            <span class="dur">約1週間</span>
+          </div>
+        </div>
+        <div class="t-item">
+          <div class="t-dot">02</div>
+          <div class="t-content">
+            <h4>構成・デザイン案のご提示</h4>
+            <p>8ページ分の構成案とトップページのデザインを先行してご確認いただきます。</p>
+            <span class="dur">約2週間</span>
+          </div>
+        </div>
+        <div class="t-item">
+          <div class="t-dot">03</div>
+          <div class="t-content">
+            <h4>全ページ制作・原稿反映</h4>
+            <p>ご提供いただく文章・実績情報等をもとに、残りのページを一貫したデザインで制作します。</p>
+            <span class="dur">約2〜3週間</span>
+          </div>
+        </div>
+        <div class="t-item">
+          <div class="t-dot">04</div>
+          <div class="t-content">
+            <h4>確認・修正・最終調整</h4>
+            <p>表示速度やスマートフォンでの見え方も含め、細部まで確認しながら仕上げます。</p>
+            <span class="dur">約1週間</span>
+          </div>
+        </div>
+        <div class="t-item">
+          <div class="t-dot">05</div>
+          <div class="t-content">
+            <h4>公開・運用サポート</h4>
+            <p>公開後の表示確認と、更新方法のご案内、必要に応じた軽微な調整対応まで行います。</p>
+            <span class="dur">公開後も継続対応</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CLOSING ===== -->
+  <section class="closing">
+    <div class="closing-inner wrap">
+      <h2>まずは、率直にお話をお聞かせください。</h2>
+      <p>
+        新事業の想い、ターゲットへの理解、これまでの15年間の歩み――
+        それらを丁寧にお聞きした上で、貴社らしい一枚のサイトを一緒に形にしていきたいと考えています。
+      </p>
+      <a href="#" class="cta-btn">Kairosに相談してみる</a>
+      <div class="closing-sub">Web制作・システム開発 — Kairos</div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; Kairos — Proposal for <strong>precople</strong> International Marriage Consulting Website Project
+  </footer>
+
+</body>
+</html>
